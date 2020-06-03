@@ -24,17 +24,17 @@ jobs:
 
     - name: INSTALL Node JS
       uses: actions/setup-node@v2-beta
-        with:
-          node-version: 12 
+      with:
+        node-version: 12 
         
     - name: Prepare for yarn installation
       uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # will run `yarn install` command
+      with:
+        cmd: install # will run `yarn install` command
     
     - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build # will run `yarn build` command
+      with:
+        cmd: build # will run `yarn build` command
           
     - name: install Surge
       run: npm install --globally surge
